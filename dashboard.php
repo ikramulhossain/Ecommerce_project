@@ -27,7 +27,7 @@ if(!isset($admin_id)){
 </head>
 <body>
 
-<?php include '../components/admin_header.php'; ?>
+<?php include '../components/adminheader.php'; ?>
 
 <section class="dashboard">
 
@@ -38,7 +38,7 @@ if(!isset($admin_id)){
       <div class="box">
          <h3>welcome!</h3>
          <p><?= $fetch_profile['name']; ?></p>
-         <a href="update_profile.php" class="btn">update profile</a>
+         <a href="admin_update_profile.php" class="btn">update profile</a>
       </div>
 
       <div class="box">
@@ -54,7 +54,7 @@ if(!isset($admin_id)){
          ?>
          <h3><span>$</span><?= $total_pendings; ?><span>/-</span></h3>
          <p>total pendings</p>
-         <a href="placed_orders.php" class="btn">see orders</a>
+         <a href="admin_placed_orders.php" class="btn">see orders</a>
       </div>
 
       <div class="box">
@@ -70,7 +70,7 @@ if(!isset($admin_id)){
          ?>
          <h3><span>$</span><?= $total_completes; ?><span>/-</span></h3>
          <p>completed orders</p>
-         <a href="placed_orders.php" class="btn">see orders</a>
+         <a href="admin_placed_orders.php" class="btn">see orders</a>
       </div>
 
       <div class="box">
@@ -81,7 +81,7 @@ if(!isset($admin_id)){
          ?>
          <h3><?= $number_of_orders; ?></h3>
          <p>orders placed</p>
-         <a href="placed_orders.php" class="btn">see orders</a>
+         <a href="admin_placed_orders.php" class="btn">see orders</a>
       </div>
 
       <div class="box">
@@ -95,38 +95,9 @@ if(!isset($admin_id)){
          <a href="products.php" class="btn">see products</a>
       </div>
 
-      <div class="box">
-         <?php
-            $select_users = $conn->prepare("SELECT * FROM `users`");
-            $select_users->execute();
-            $number_of_users = $select_users->rowCount()
-         ?>
-         <h3><?= $number_of_users; ?></h3>
-         <p>normal users</p>
-         <a href="users_accounts.php" class="btn">see users</a>
-      </div>
 
-      <div class="box">
-         <?php
-            $select_admins = $conn->prepare("SELECT * FROM `admins`");
-            $select_admins->execute();
-            $number_of_admins = $select_admins->rowCount()
-         ?>
-         <h3><?= $number_of_admins; ?></h3>
-         <p>admin users</p>
-         <a href="admin_accounts.php" class="btn">see admins</a>
-      </div>
 
-      <div class="box">
-         <?php
-            $select_messages = $conn->prepare("SELECT * FROM `messages`");
-            $select_messages->execute();
-            $number_of_messages = $select_messages->rowCount()
-         ?>
-         <h3><?= $number_of_messages; ?></h3>
-         <p>new messages</p>
-         <a href="messagess.php" class="btn">see messages</a>
-      </div>
+
 
    </div>
 

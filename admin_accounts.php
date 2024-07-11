@@ -34,7 +34,7 @@ if(isset($_GET['delete'])){
 </head>
 <body>
 
-<?php include '../components/admin_header.php'; ?>
+<?php include '../components/adminheader.php'; ?>
 
 <section class="accounts">
 
@@ -51,7 +51,7 @@ if(isset($_GET['delete'])){
       $select_accounts = $conn->prepare("SELECT * FROM `admins`");
       $select_accounts->execute();
       if($select_accounts->rowCount() > 0){
-         while($fetch_accounts = $select_accounts->fetch(PDO::FETCH_ASSOC)){   
+         while($fetch_accounts = $select_accounts->fetch(PDO::FETCH_ASSOC)){
    ?>
    <div class="box">
       <p> admin id : <span><?= $fetch_accounts['id']; ?></span> </p>
@@ -88,6 +88,6 @@ if(isset($_GET['delete'])){
 
 
 <script src="../js/admin_script.js"></script>
-   
+
 </body>
 </html>

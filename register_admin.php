@@ -53,7 +53,7 @@ if(isset($_POST['submit'])){
 </head>
 <body>
 
-<?php include '../components/admin_header.php'; ?>
+<?php include '../components/adminheader.php'; ?>
 
 <section class="form-container">
 
@@ -79,6 +79,6 @@ if(isset($_POST['submit'])){
 
 
 <script src="../js/admin_script.js"></script>
-   
+
 </body>
 </html>

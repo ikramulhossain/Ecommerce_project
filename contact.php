@@ -1,6 +1,6 @@
 <?php
 
-include 'components/connect.php';
+include '../components/connect.php';
 
 session_start();
 
@@ -57,7 +57,9 @@ if(isset($_POST['send'])){
 </head>
 <body>
 
-<?php include '../components/user_header.php'; ?>
+<div>
+<a href="index.php" class="logo" style="font-size:2.5rem;">BuySell<span>.</span></a>
+</div>
 
 <section class="contact">
 
@@ -84,9 +86,9 @@ if(isset($_POST['send'])){
 
 
 
-<?php include 'components/footer.php'; ?>
+<?php include '../components/footer.php'; ?>
 
-<script src="js/script.js"></script>
+<script src="../js/script.js"></script>
 
 </body>
 </html>
